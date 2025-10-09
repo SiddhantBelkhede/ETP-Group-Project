@@ -70,6 +70,13 @@ function HomePage() {
             >
               View on GitHub →
             </a>
+               <button 
+ className="view-more-btn" 
+ onClick={() => navigate(`/projects/${project.id}`)}
+ >
+ View More
+ </button>
+
           </div>
         ))}
       </div>

@@ -180,3 +180,60 @@ body {
     background-color: #d9d9d9;
     color: #000;
 }
+
+
+/* --- CODE TO ADD TO THE END OF hp.css --- */
+
+/* ===== View More Button (New Style) ===== */
+.view-more-btn {
+    /* Use a clear, but darker accent color to contrast with the light header buttons */
+    background-color: #3b82f6; /* Matching your existing project-link color */
+    color: white; 
+    
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px; /* Slightly rounder to match header buttons */
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    
+    /* Layout */
+    display: inline-block;
+    width: auto; 
+    margin-top: 10px; 
+    
+    /* Transitions for interactivity */
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.view-more-btn:hover {
+    background-color: #2563eb; /* Slightly darker blue on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+/* ===== GitHub Link (Project Link) - Adjustment for better theme integration ===== */
+/* This section overrides the previous .project-link to make it look less like a default blue link */
+.project-card .project-link {
+    color: #4ade80; /* Use a light green accent for a 'tech' feel (alternative to blue) */
+    text-decoration: none;
+    font-weight: 500; /* Lighter weight for subtlety */
+    display: block; 
+    margin-top: 10px;
+    margin-bottom: 5px; 
+    font-size: 0.85rem; /* Match button font size */
+    transition: color 0.3s;
+}
+
+.project-card .project-link:hover {
+    color: #86efac; /* Lighter green on hover */
+    text-decoration: underline;
+}
+
+/* Optional: If you want the tech badges to pop a bit more */
+.tech-badge {
+    background: #222; /* Slightly darker than card background */
+    color: #93c5fd; /* Light blue/cyan for a subtle tech badge color */
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+}
