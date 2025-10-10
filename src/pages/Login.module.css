@@ -1,0 +1,120 @@
+/* General container and dark background */
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Match the dark background of your main page */
+  background-color: #0d0d0d; 
+  min-height: 100vh;
+  padding: 20px;
+  color: #f0f0f0; /* Light text color for contrast */
+}
+
+/* Page title and subtitle */
+.title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #f0f0f0; /* White/light text */
+}
+
+.subtitle {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #a0a0a0; /* Slightly dimmer white */
+}
+
+/* Form container */
+.loginForm {
+  background-color: #1a1a1a; /* Dark gray for the form box (slightly lighter than background) */
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px; /* Constrain the form width */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  border: 1px solid #333; /* High-contrast border */
+}
+
+/* Input group styling */
+.inputGroup {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #f0f0f0; /* White label text */
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  /* Black and white styling */
+  background-color: #0d0d0d; /* Black input background */
+  color: #f0f0f0; /* White text input */
+  border: 1px solid #444; /* Darker gray border */
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.input:focus {
+  border-color: #f0f0f0; /* White border on focus for high contrast */
+  outline: none;
+}
+
+/* Button styling */
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f0f0f0; /* White background for the button */
+  color: #0d0d0d; /* Black text for the button (High Contrast) */
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #a0a0a0; /* Darker gray on hover */
+}
+
+.button:disabled {
+  background-color: #333; /* Darker background when disabled */
+  color: #666; /* Grayed-out text */
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.error {
+  color: #ff6666; /* A subtle red for errors (can be changed to a lighter gray if preferred) */
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Footer text (Register link area) */
+.footerText {
+  margin-top: 20px;
+  color: #a0a0a0;
+  font-size: 0.9em;
+}
+
+.link {
+  color: #f0f0f0; /* White link text */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #a0a0a0; /* Darker gray on hover */
+  text-decoration: underline;
+}

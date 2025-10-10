@@ -1,9 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../hp.css";
-
-
-
 
 function HomePage() {
   const navigate = useNavigate();
@@ -34,8 +31,12 @@ function HomePage() {
           <h1 className="logo">My Project Library</h1>
         </div>
         <div className="nav-right">
-          <button className="btn login-btn">Login</button>
-          <button className="btn register-btn">Register</button>
+         <Link to="/login">
+  <button className="btn login-btn">Login</button>
+</Link>
+         <Link to="/register">
+  <button className="btn register-btn">Register</button>
+</Link>
         </div>
       </nav>
       <div className="home-header">
