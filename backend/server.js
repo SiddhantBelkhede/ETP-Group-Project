@@ -4,7 +4,9 @@ import cors from "cors";
 
 const app = express();
 app.use(express.json());
-app.use(cors()); 
+app.use(cors());
+
+
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/projectsdb")
@@ -54,6 +56,32 @@ app.post("/api/projects", async (req, res) => {
   const savedProject = await newProject.save();
   res.status(201).json(savedProject);
 });
+
+//  Get All Projects
+
+app.get("/api/projects", async (req, res) => {
+  try {
+    const projects = await Project.find();
+    res.json(projects);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching projects", error });
+  }
+});
+
+// Get Single Project by ID
+
+app.get("/api/projects/:id", async (req, res) => {
+  try {
+    const project = await Project.findById(req.params.id);
+    if (!project) {
+      return res.status(404).json({ message: "Project not found" });
+    }
+    res.json(project);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching project", error });
+  }
+});
+
 
 // --------------------- HERE ADD YOUR SERVER SO IT WILL BE SIEAMLESS ------------------------
 // In the formate of
