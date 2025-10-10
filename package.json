@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "mongoose": "^8.19.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.3"
@@ -31,5 +35,13 @@
   "main": "eslint.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shrushti-Balode/ETP-Group-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shrushti-Balode/ETP-Group-Project/issues"
+  },
+  "homepage": "https://github.com/Shrushti-Balode/ETP-Group-Project#readme"
 }
