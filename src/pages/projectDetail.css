@@ -1,0 +1,146 @@
+/* projectDetail.css */
+
+/* --- General Layout and Background --- */
+.detail-container {
+  /* Match the dark background of your screenshot */
+  background-color: #1A1A1A; 
+  color: #f0f6f9; /* Off-white text */
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  font-family: Arial, sans-serif;
+  min-height: 80vh; /* Ensure it looks good even with minimal content */
+}
+
+/* --- Project Title and Owner --- */
+.project-title {
+  color: #00bcd4; /* Bright Teal accent for the main title */
+  font-size: 2.8em;
+  font-weight: 700;
+  border-bottom: 2px solid #333333; /* Subtly darker divider */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.project-owner {
+  font-style: italic;
+  color: #aaaaaa; /* Lighter gray for secondary info */
+  font-size: 1em;
+  margin-bottom: 30px;
+  /* You might need to adjust the field name 'ownerName' in ProjectDetailPage.jsx */
+}
+
+/* --- Section Styling --- */
+.project-section {
+  margin-bottom: 30px;
+  padding: 15px 0;
+  border-top: 1px solid #333333; /* Dark, subtle line */
+}
+
+.project-section h2 {
+  color: #f0f6f9;
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* --- Tech Badges (Matching your screenshot style) --- */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-badge {
+  /* Match the background of your existing project cards' tags */
+  background-color: #333333; 
+  color: #00bcd4; /* Teal text to match the accent */
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* --- GitHub Link --- */
+.github-link {
+  color: #76ff03; /* Lime Green accent */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.github-link:hover {
+  color: #a7ffeb; /* Lighter color on hover */
+  text-decoration: underline;
+}
+
+/* --- Action Buttons (Edit/Delete) --- */
+.owner-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed #333333;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.edit-btn {
+  background-color: #00bcd4; /* Teal for Edit */
+  color: #1A1A1A;
+}
+
+.edit-btn:hover {
+  background-color: #00a0b0;
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red for Delete */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+  transform: translateY(-1px);
+}
+
+/* --- Back Button --- */
+.back-btn {
+    margin-top: 40px;
+    background: none;
+    border: 1px solid #76ff03; /* Border using the secondary green accent */
+    color: #76ff03;
+    padding: 10px 20px;
+}
+
+.back-btn:hover {
+    background-color: rgba(118, 255, 3, 0.1); /* Slight green tint on hover */
+    color: #a7ffeb;
+}
+
+/* --- Loading and Error States --- */
+.detail-container.error {
+    color: #f44336;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 50px;
+}
